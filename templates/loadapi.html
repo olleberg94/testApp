@@ -1,0 +1,20 @@
+<div id="resultDiv"><p id="resultSet"></p>
+    <table class="weatherTable\">
+        <thead>
+            <tr>
+                {% for col in colnames[0:5] %}
+                <th>{{ col }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                {% for col in colnames[0:5] %}
+                <td>{{ record[col] }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

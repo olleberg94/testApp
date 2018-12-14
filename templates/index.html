@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ url_for('static',filename='scripts.js') }}"></script>
+</head>
+<body>
+<div class="emailBody" id="emailBody">
+  <h1 style="text-align: center">Login</h1>
+ <input type="text" class="loginField" id="gmailID" placeholder="Enter ProjectID"></input>
+<br></br>
+<button class="loginButton" onclick="logon()">Login</button> </div>
+
+<div class="weatherBody" id="weatherBody">
+  <h1 id="welcomeMsg">Enter API to load:</h1>
+ <!--   <form method="post" action="/"> -->
+        <input type="text" class="weatherCity" name="requestURL" id="requestURL" placeholder="Enter API url"></input>
+        <input type="text" class="weatherCity" name="dataSet" id="dataSet" placeholder="Enter Dataset"></input>
+        <input type="text" class="weatherCity" name="tableName" id="tableName" placeholder="Enter Table Name"></input>
+        <input type="hidden" class="weatherCity" name="project" id="project" value="balmy-component-220214"></input>
+  <p></p>
+<!-- <input class="btnload-api" type="submit" value="DEPORECATED" onclick="startLoad()"></input> -->
+    <button class="btnload-api" id="loadButton" onclick="startLoad()">Load API</button>
+  <!--  </form> -->
+    <div class="tableDiv" id="tableDiv">
+
+    </div>
+
+    <br></br>
+    <hr>
+    <button class="logoutButton" onclick="logout()">Logout</button>
+<div class="loading" id="loading">
+<div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+</div>
+
+
+</body>
+</html>
